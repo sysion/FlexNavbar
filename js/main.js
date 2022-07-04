@@ -11,11 +11,25 @@
 	let toggleItem = (obj)=>{
 		if (obj.classList.contains('remove')){
 			obj.classList.remove('remove');
-			obj.classList.add('add');
+			//obj.classList.add('add');
+
+			if (obj === projects_nav){
+				obj.classList.add('addFlex');
+			}
+			else{
+				obj.classList.add('add');
+			}
 		}
 		else{
-			obj.classList.remove('add');
-			obj.classList.add('remove');	
+			//obj.classList.remove('add');
+			obj.classList.add('remove');
+
+			if (obj === projects_nav){
+				obj.classList.remove('addFlex');
+			}
+			else{
+				obj.classList.remove('add');
+			}	
 		}
 	}
 

@@ -34,7 +34,7 @@ a{
 
 a:hover,
 a:focus{
-	color: #80bd43;
+	color: #80bd43 !important;
 }
 
 img{
@@ -124,6 +124,10 @@ ul, li{
 	display: block;
 }
 
+.addFlex{
+	display: flex;
+}
+
 /* -------------------------------------- 
    ---------- Media Queries -------------
 ----------------------------------------- */
@@ -137,7 +141,95 @@ ul, li{
 }
 
 @media screen and (min-width: 768px){
-	
+	.logo-nav{
+		border-bottom: 0.1rem solid #125581;
+	}
+
+	.toggle{
+		display: none;
+	}
+
+	.logo-nav > nav{	/* direct child nav */
+		width: 50rem;
+		display: block;
+	}
+
+	.logo-nav > nav{	/* direct child nav */
+		position: unset;
+	}
+
+	.logo-nav > nav > ul{	/* direct child nav */
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: no-wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo-nav nav > ul > li{
+		text-align: center;
+	}
+
+	.logo-nav > nav > ul > li > a{
+		color: #125581;
+	}
+
+	.logo-nav nav > ul > li:not(:nth-child(1)){
+		border-top: none;
+	}
+
+	.projects-nav{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		/*display: flex;*/
+		flex-direction: row;
+		flex-wrap: no-wrap;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #125581;
+	}
+
+	.project-sub-menu{
+		display: none;
+	}
+
+	/*.projects nav > ul{	* inherits flex display from .logo-nav nav > ul *
+		flex-direction: column;
+		justify-content: center;
+	}*/
+
+	.project-sub-education,
+	.project-sub-water,
+	.project-sub-climate{	/* inherits flex display from .logo-nav nav > ul */
+		display: flex;
+		flex-direction: column;
+		flex-wrap: no-wrap;
+		justify-content: center;
+		align-items: center;
+
+		/*display: block;*/
+	}
+
+	.projects nav a{
+		color: white;
+	}
+
+	/*.projects nav ul li:nth-child(1) a:hover,
+	.projects nav ul li:nth-child(1) a:focus{
+		color: white;
+	}*/
+
+	.project-sub-education li:nth-child(1) a:hover,
+	.project-sub-water li:nth-child(1) a:hover,
+	.project-sub-climate li:nth-child(1) a:hover,
+	.project-sub-education li:nth-child(1) a:focus,
+	.project-sub-water li:nth-child(1) a:focus,
+	.project-sub-climate li:nth-child(1) a:focus{
+		color: white !important;
+	}	
 }
 
 @media screen and (min-width: 992px){
