@@ -65,6 +65,23 @@ ul, li{
 	position: relative;
 }
 
+.toggle{
+	width: 5rem;
+	height: 3.6rem;
+	font-weight: bold;
+	text-align: center;
+	line-height: 3.6rem;
+	margin-right: 1.5rem;
+	cursor: pointer;
+	background-color: #125581;
+}
+
+.fa-bars{
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+
 .logo-nav > nav{	/* direct child nav */
 	position: absolute;
 	top: 100%;
@@ -99,13 +116,6 @@ ul, li{
 	border-top: 0.1rem solid white;
 }
 
-/*.project-sub-menu a,
-.project-sub-menu nav,
-.project-sub-menu ul,
-.project-sub-menu li{
-	background-color: #80bd43;
-}*/
-
 .project-sub-menu li:nth-child(1){
 	border-top: 0.1rem solid white;
 }
@@ -131,15 +141,6 @@ ul, li{
 /* -------------------------------------- 
    ---------- Media Queries -------------
 ----------------------------------------- */
-@media screen and (max-width: 480px){
-	
-}
-
-@media screen and (min-width: 481px){
-	
-
-}
-
 @media screen and (min-width: 768px){
 	.logo-nav{
 		border-bottom: 0.1rem solid #125581;
@@ -196,31 +197,19 @@ ul, li{
 		display: none;
 	}
 
-	/*.projects nav > ul{	* inherits flex display from .logo-nav nav > ul *
-		flex-direction: column;
-		justify-content: center;
-	}*/
-
 	.project-sub-education,
 	.project-sub-water,
-	.project-sub-climate{	/* inherits flex display from .logo-nav nav > ul */
+	.project-sub-climate{
 		display: flex;
 		flex-direction: column;
 		flex-wrap: no-wrap;
 		justify-content: center;
 		align-items: center;
-
-		/*display: block;*/
 	}
 
 	.projects nav a{
 		color: white;
 	}
-
-	/*.projects nav ul li:nth-child(1) a:hover,
-	.projects nav ul li:nth-child(1) a:focus{
-		color: white;
-	}*/
 
 	.project-sub-education li:nth-child(1) a:hover,
 	.project-sub-water li:nth-child(1) a:hover,
@@ -230,8 +219,12 @@ ul, li{
 	.project-sub-climate li:nth-child(1) a:focus{
 		color: white !important;
 	}	
-}
 
-@media screen and (min-width: 992px){
-	
+	.project-sub-education li:nth-child(1),
+	.project-sub-water li:nth-child(1),
+	.project-sub-climate li:nth-child(1){
+		border-bottom: 0.1rem solid white;
+	}	
+
+
 }
